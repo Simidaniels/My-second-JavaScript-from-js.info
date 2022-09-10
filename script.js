@@ -397,9 +397,9 @@ typeof alert // 'function'
                         The call to prompt returns the text from the input field or null if the input was canceled.
                     */
                             // for Instance:
-let myAge = prompt('How old are you?', 20);
+// let myAge = prompt('How old are you?', 20);
 
-console.log(`You are ${myAge} years old!`);   // You are 100 years old!   (Embedded with backticks)
+// console.log(`You are ${myAge} years old!`);   // You are 100 years old!   (Embedded with backticks)
     // alert('you are' + myAge + 'years old');     // Another way to run it
 
                     /*
@@ -409,7 +409,7 @@ console.log(`You are ${myAge} years old!`);   // You are 100 years old!   (Embed
                     */
         // let test = prompt('Test');    
 
-let test = prompt('Test', '');      // <-- for IE. (Recommend putting a second parameter).
+// let test = prompt('Test', '');      // <-- for IE. (Recommend putting a second parameter).
  
 
                             // CONFIRM //
@@ -418,18 +418,18 @@ let test = prompt('Test', '');      // <-- for IE. (Recommend putting a second p
 let BTC, ETH;
 
 BTC = 21346;           // Used Bitcoin price at that moment.
-ETH = 32188            // Used Ethereum rice at te
-result = confirm(BTC);        // Something must be declared.
-result = confirm(ETH);        // Something must be declared.
+ETH = 32188            // Used Ethereum price at that moment.
+
+// result = confirm(BTC);        // Something must be declared.
                         // All 'CONFIRM' syntax test was from me not in the documentation.
                     /*
                         The function confirm shows a modal window with a question and two buttons: OK and Cancel.
                         The result is true if OK is pressed and false otherwise.
                         For example:
                     */
-let isBoss = confirm("Are you the boss?");
+// let isBoss = confirm("Are you the boss?");
 
-alert(isBoss);              // true if OK is pressed
+// alert(isBoss);              // true if OK is pressed
                         /*
                                     Summary
                             alert: shows a message.
@@ -441,7 +441,40 @@ alert(isBoss);              // true if OK is pressed
                                         they pause script execution and don’t allow the visitor to 
                                         interact with the rest of the page until the window has been dismissed.
                         */
-                       
+
+
+
+
+
+
+                                    // TYPE CONVERSATIONS //
+                        /*
+                            Most of the time, operators and functions automatically convert the values given to them to the right type.
+                            For example, 'alert' automatically converts any value to a string to show it.
+                            Mathematical operations convert values to numbers.
+                            There are also cases when we need to explicitly convert a value to the expected type.
+                        */
+
+                                    // STRING CONVERSION //
+                        /*
+                            String conversion happens when we need the string form of a value.
+                            For example, alert(value) does it to show the value.
+                            We can also call the String(value) function to convert a value to a string:
+                        */
+let value = true;   // Boolean.
+// alert(typeof value);
+
+value = String(value);      // now the value is a string 'true'
+// alert(typeof value);  // string.
+                        // String conversion is mostly obvious. A false becomes "false", null becomes "null", etc.
+
+                                    // Numeric Conversation //
+                        /*
+                            Numeric conversion happens in mathematical functions and expressions automatically.
+                            For example, when division / is applied to non-numbers:
+                        */
+console.log("16" / "2");               // 8 is displayed in the console, strings are converted to numbers.
+
 
 
 
