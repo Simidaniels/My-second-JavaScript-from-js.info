@@ -444,9 +444,6 @@ ETH = 32188            // Used Ethereum price at that moment.
 
 
 
-
-
-
                                     // TYPE CONVERSATIONS //
                         /*
                             Most of the time, operators and functions automatically convert the values given to them to the right type.
@@ -459,7 +456,7 @@ ETH = 32188            // Used Ethereum price at that moment.
                         /*
                             String conversion happens when we need the string form of a value.
                             For example, alert(value) does it to show the value.
-                            We can also call the String(value) function to convert a value to a string:
+                            We can also call the String(value) function to convert a value to a string:                        
                         */
 let value = true;   // Boolean.
 // alert(typeof value);
@@ -468,28 +465,113 @@ value = String(value);      // now the value is a string 'true'
 // alert(typeof value);  // string.
                         // String conversion is mostly obvious. A false becomes "false", null becomes "null", etc.
 
-                                    // Numeric Conversation //
+                                    // NUMERIC CONVERSION //
                         /*
                             Numeric conversion happens in mathematical functions and expressions automatically.
                             For example, when division / is applied to non-numbers:
                         */
 console.log("16" / "2");               // 8 is displayed in the console, strings are converted to numbers.
+                        
+                    // We can use the Number(value) function to explicitly convert a value to a number:
+
+let str = '123';
+console.log(typeof str);    // string is been displayed.
+
+let figure = Number(str);
+console.log(typeof figure);    // string type is displayed as number.
+
+                /*
+                    Explicit conversion is usually required when we read  value from a string-based
+                    source like a text form but expect a number to be entered.
+                    If a string is not a valid number, the result of such a conversion is 'NaN'.
+                        For instance:
+                */
+let fig = Number('an arbitrary string instead of a number');
+
+console.log(fig);     // NaN, conversion failed.
+
+                /*
+                    numeric conversion rules:
+
+                    Undefined = NaN
+                    Null = 0
+                    True and False = 1 and 0
+                    String = Whitespace (includes spaces, tabs \t, newlines \n etc.) 
+                            from the start and end are removed. 
+                            If the remaining string is empty, 
+                            the result is 0. Otherwise, the number 
+                            is “read” from the string. An error gives NaN.
+                */
+                        // Examples;
+console.log( Number(' 123 ') );        // 123
+console.log( Number('123z') );          // NaN(error reading a number at Z)
+console.log( Number(true));             // 1
+console.log( Number(false));            // 0
+                    // NOTE: Please note that null and undefined behave differently here: null becomes zero while undefined becomes NaN. //
+
+                                    // BOOLEAN CONVERSION 
+                /*
+                    Boolean conversion is the simplest one.
+                    It happens in logical operations (later we’ll meet condition tests and other similar things) 
+                    but can also be performed explicitly with a call to Boolean(value).
+                    
+                    The conversion rule:
+                    1.  Values that are intuitively “empty”, like 0, an empty string, null, undefined, and NaN, become false.
+                    2.  Other values become true.
+                */
+                // Note that the string with zero (0) is 'true'
+console.log(    Boolean('0'));      // console 'true'.
+
+console.log(    Boolean(' '));      // console 'true'.
+                                      /*  I run some test on this; the empty quotation(' '), with space in between it
+                                        console output will be 'true' but without space ('') console output will be false. */
+                            // for example:
+console.log(     Boolean(''));      // console 'false'
+
+                                    /*
+                                            summary
+                                        The three most widely used type conversions are to string, to number, and to boolean.
+                                        String Conversion – Occurs when we output something. Can be performed with String(value). 
+                                        The conversion to string is usually obvious for primitive values.
+
+                                        Numeric Conversion – Occurs in math operations. Can be performed with Number(value).
+
+                                        Boolean Conversion – Occurs in logical operations. Can be performed with Boolean(value).
+                                    */
 
 
+                                            // BASIC OPERATIONS, MATHS 
+                /*
+                    We know many operators from school. They are things like addition +, multiplication *, subtraction -, and so on.
+                    In this chapter, we’ll start with simple operators, then concentrate on JavaScript-specific aspects, not covered by school arithmetic.
+                */
 
+                        // Terms: “unary”, “binary”, “operand” //
+                /*
+                    Before we move on, let’s grasp some common terminology.
+                        An operand – is what operators are applied to. 
+                        For instance, in the multiplication of 5 * 2 there are two operands: the left operand is 5 and the right operand is 2. 
+                        Sometimes, people call these “arguments” instead of “operands”.
+                */
+        // An operator is unary if it has a single operand. For example, the unary negation - reverses the sign of a number:
+let  x = 1;
+x = -x;
 
+console.log(x);     // console -1, unary negation was applied.
 
+        // An operator is binary if it has two operands. The same minus exists in binary form as well:
+let y = 1, z = 3;       
 
+console.log( z - y);    // console 2, binary minus subtracts values.
+                /*
+                    Formally, in the examples above we have two different operators that share the same symbol: 
+                    the negation operator, a unary operator that reverses the sign, and the subtraction operator, 
+                    a binary operator that subtracts one number from another.
+                */
 
+                    // Maths //
 
-
-
-
-
-
-
-
-
+console.log(4 ** (20/2) );
 
 
 
