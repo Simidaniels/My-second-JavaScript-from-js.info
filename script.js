@@ -570,8 +570,65 @@ console.log( z - y);    // console 2, binary minus subtracts values.
                 */
 
                     // Maths //
+                /*
+                    The following math operations are supported:
+                        Addition (+),
+                        Subtraction (-),
+                        Multiplication (*),
+                        Division (/),
+                        Remainder (%),
+                        Exponentiation (**).
 
-console.log(4 ** (20/2) );
+                    The first four are straightforward, while % and ** need a few words about them.
+                */
+
+                    // Remainder (%) //   
+                        // The remainder operator %, despite its appearance, is not related to percents.
+                        // The result of a % b is the remainder of the integer division of a by b.
+            // For instance:
+console.log(5 % 2);     // a remainder of 5 divided by 2 equals '1'.
+console.log(8 % 3);     // a remainder of 8 divided by 3 equals '2'.
+
+                    // Exponentiation (**)
+                // The exponentiation operator a ** b raises a to the power of b.
+                // In school maths, we write that as ab. For Instance;
+console.log(2 ** 2);    // 2² = 4
+console.log(2 ** 3);    // 2³ = 8
+console.log(2 ** 4);    // 2⁴ = 16
+
+                // Just like in maths, the exponentiation operator is defined for non-integer numbers as well.
+                // For example, a square root is an exponentiation by ½:
+
+console.log(4 ** (1 / 2));    // 2 (power of 1/2 is the same as a square root)
+console.log(8 ** (1 / 3));   // 2 (power of 1/3 is the same as a cubic root)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
