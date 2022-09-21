@@ -599,40 +599,36 @@ console.log(2 ** 4);    // 2⁴ = 16
                 // Just like in maths, the exponentiation operator is defined for non-integer numbers as well.
                 // For example, a square root is an exponentiation by ½:
 
-console.log(4 ** (1 / 2));    // 2 (power of 1/2 is the same as a square root)
-console.log(8 ** (1 / 3));   // 2 (power of 1/3 is the same as a cubic root)
+console.log(4 ** (1 / 2));    // 2 (power of 1/2 is the same as a square root).
+console.log(8 ** (1 / 3));   // 2 (power of 1/3 is the same as a cubic root).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    // String concatenation with binary +
+                /*
+                    Let’s meet features of JavaScript operators that are beyond school arithmetics.
+                    Usually, the plus operator + sums numbers.
+                    But, if the binary + is applied to strings, it merges (concatenates) them:
+                */
+let s = 'my' + 'string';
+console.log(s);
+                // Note that if any of the operands is a string, then the other one is converted to a string too.
+                // For Example;
+console.log('1' + 2);       // '12'.
+console.log(2 + '1');       // '21'
+                // See, it doesn't matter whether the first operand is a string or the second one.
+                // Here is more complex example;
+console.log(2 + 2 + '1');   // 41 displayed in the console.It can't be 221 because 2 + 2 were added as 4 then 1 is attached to it as a string.
+                /*
+                    Here, operators work one after another. 
+                    The first + sums two numbers, so it returns 4, 
+                    then the next + adds the string 1 to it, so it’s like 4 + '1' = '41'.
+                */
+console.log('1' + 2 + 2);   // "122" and not "14". 
+                /*
+                    Here, the first operand is a string, the compiler treats the other two operands as strings too.
+                    The 2 gets concatenated to '1', so it’s like '1' + 2 = "12" and "12" + 2 = "122".
+                    The binary + is the only operator that supports strings in such a way.
+                    Other arithmetic operators work only with numbers and always convert their operands to numbers.
+                */
+                // Here’s the demo for subtraction and division:
+console.log(6 - '2');   // output 4, converts '2' to a number.
+console.log('6' / '2'); // output 3, converts both operands to numbers.
